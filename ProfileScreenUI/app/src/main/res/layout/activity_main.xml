@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/header_background"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/layoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/artistTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="70dp"
+                    android:layout_gravity="center"
+                    android:text="Cem Karaca"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center"
+                    />
+                    <TextView
+                        android:id="@+id/aboutTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Famous Singer in Turkey"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/artistTextView" />
+                    <TextView
+                        android:id="@+id/postsTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="962"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/followersTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/aboutTextView"
+                        />
+                    <TextView
+                        android:id="@+id/followersTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="912k"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/followingTextView"
+                        app:layout_constraintStart_toEndOf="@id/postsTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/aboutTextView"
+
+                        />
+                    <TextView
+                        android:id="@+id/followingTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="112"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                       app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/followersTextView"
+                        app:layout_constraintTop_toBottomOf="@id/aboutTextView"
+
+                        />
+                    <TextView
+                        android:id="@+id/postsLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="POSTS"
+                        android:paddingBottom="5dp"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorTextSecondary"
+                        app:layout_constraintEnd_toStartOf="@id/followersTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/postsTextView"
+                        />
+                    <TextView
+                        android:id="@+id/followersLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="FOLLOWERS"
+                        android:paddingBottom="5dp"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorTextSecondary"
+                        app:layout_constraintStart_toEndOf="@+id/postsLabelTextView"
+                        app:layout_constraintEnd_toStartOf="@+id/followLabelTextView"
+                        app:layout_constraintTop_toBottomOf="@id/followersTextView"
+                        />
+                    <TextView
+                        android:id="@+id/followLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="FOLLOWING"
+                        android:paddingBottom="5dp"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorTextSecondary"
+                        app:layout_constraintStart_toEndOf="@id/followersLabelTextView"
+                        app:layout_constraintTop_toBottomOf="@id/followingTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/cemkaraca"
+            app:layout_constraintBottom_toTopOf="@id/layoutProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutProfile"
+            app:riv_border_width="1dp"
+            app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tagsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="TAGS"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile"
+
+        />
+        <LinearLayout
+            android:id="@+id/tagsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tagsTextView"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/tags_background"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Singer"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/tags_background"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Rocker"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/tags_background"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Reporter"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/tags_background"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Presenter"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                />
+
+
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/latestPostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="LATEST POSTS"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagsLayout"
+            />
+        <HorizontalScrollView
+            android:id="@+id/latestPostsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/latestPostTextView"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/collection_layout_1" />
+                <include layout="@layout/collection_layout_2" />
+                <include layout="@layout/collection_layout_3" />
+                <include layout="@layout/collection_layout_4" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/collectionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="COLLECTION"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latestPostsLayout"
+            />
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/collectionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:columnCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/collectionTextView"
+            app:useDefaultMargins="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/adana"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sunucu"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/deniz"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/konser"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kitap"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ibadet"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:riv_corner_radius="6dp"/>
+
+
+
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
